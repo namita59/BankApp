@@ -1,5 +1,0 @@
-INFO     Test_SignUp_Class:Test_SignUp.py:30 test_url_001 is started
-INFO     Test_SignUp_Class:Test_SignUp.py:33 Opening The Browser
-INFO     Test_SignUp_Class:Test_SignUp.py:34 Verifying the page title-->Bank Application
-INFO     Test_SignUp_Class:Test_SignUp.py:39 test_url_001 is failed
-INFO     Test_SignUp_Class:Test_SignUp.py:49 test_url_001 is completed

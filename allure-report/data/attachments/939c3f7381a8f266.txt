@@ -1,3 +1,0 @@
-Test run - Browser Chrome
-UserUpdatedSucessfully
-User_Edit_Pass

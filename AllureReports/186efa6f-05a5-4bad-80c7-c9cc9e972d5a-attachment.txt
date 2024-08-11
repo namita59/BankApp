@@ -1,8 +1,0 @@
-INFO     Test_SignUp_Class:Test_SignUp.py:58 test_SignUp_002 is started
-INFO     Test_SignUp_Class:Test_SignUp.py:61 Opening the browser
-INFO     Test_SignUp_Class:Test_SignUp.py:64 Clicking on SignUp button
-INFO     Test_SignUp_Class:Test_SignUp.py:67 Entering the username--->kWZwNjXc9t
-INFO     Test_SignUp_Class:Test_SignUp.py:70 Entering the password--->ZRjsUdjxx@
-INFO     Test_SignUp_Class:Test_SignUp.py:73 Enter the Email_id-->kWZwNjXc9t@fruitsmail.com
-INFO     Test_SignUp_Class:Test_SignUp.py:76 Enter the Phone_Number--->+1250-394-4461
-INFO     Test_SignUp_Class:Test_SignUp.py:80 Clicking On Create User

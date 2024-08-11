@@ -1,8 +1,0 @@
-[32mINFO    [0m Test_Custmgmt_Create_Class:Test_Cust_Create.py:14 test_Cust_Create_005 is started
-[32mINFO    [0m Test_Custmgmt_Create_Class:Test_Cust_Create.py:16 Opening browser
-[32mINFO    [0m Test_Custmgmt_Create_Class:Test_Cust_Create.py:18 clicking on Login option
-[32mINFO    [0m Test_Custmgmt_Create_Class:Test_Cust_Create.py:20 Entering the username-->mragrendrata
-[32mINFO    [0m Test_Custmgmt_Create_Class:Test_Cust_Create.py:22 Entering the password-->Mragren@123
-[32mINFO    [0m Test_Custmgmt_Create_Class:Test_Cust_Create.py:24 Clicking on Login button-->
-[32mINFO    [0m Test_Custmgmt_Create_Class:Test_Cust_Create.py:27 Clicking on the Customer mgmt option
-[32mINFO    [0m Test_Custmgmt_Create_Class:Test_Cust_Create.py:29 Clicking on the create customer

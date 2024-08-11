@@ -1,9 +1,0 @@
-INFO     Test_User_Logout_Class:Test_User_Logout.py:11 test_SignOut_004 is started
-INFO     Test_User_Logout_Class:Test_User_Logout.py:13 Browser is opening
-INFO     Test_User_Logout_Class:Test_User_Logout.py:15 Clicking on the Login
-INFO     Test_User_Logout_Class:Test_User_Logout.py:17 Entering the username-->mragrendrata
-INFO     Test_User_Logout_Class:Test_User_Logout.py:19 Entering the password-->Mragren@123
-INFO     Test_User_Logout_Class:Test_User_Logout.py:21 Clicking on login
-INFO     Test_User_Logout_Class:Test_User_Logout.py:23 Click on Logout
-INFO     Test_User_Logout_Class:Test_User_Logout.py:25 Validating the User_Logout
-INFO     Test_User_Logout_Class:Test_User_Logout.py:31 Test_user_logout004 is failed

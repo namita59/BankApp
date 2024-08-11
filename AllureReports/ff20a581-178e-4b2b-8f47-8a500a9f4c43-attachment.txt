@@ -1,9 +1,0 @@
-[32mINFO    [0m Test_User_Logout_Class:Test_User_Logout.py:11 test_SignOut_004 is started
-[32mINFO    [0m Test_User_Logout_Class:Test_User_Logout.py:13 Browser is opening
-[32mINFO    [0m Test_User_Logout_Class:Test_User_Logout.py:15 Clicking on the Login
-[32mINFO    [0m Test_User_Logout_Class:Test_User_Logout.py:17 Entering the username-->mragrendrata
-[32mINFO    [0m Test_User_Logout_Class:Test_User_Logout.py:19 Entering the password-->Mragren@123
-[32mINFO    [0m Test_User_Logout_Class:Test_User_Logout.py:21 Clicking on login
-[32mINFO    [0m Test_User_Logout_Class:Test_User_Logout.py:23 Click on Logout
-[32mINFO    [0m Test_User_Logout_Class:Test_User_Logout.py:25 Validating the User_Logout
-[32mINFO    [0m Test_User_Logout_Class:Test_User_Logout.py:31 Test_user_logout004 is failed
