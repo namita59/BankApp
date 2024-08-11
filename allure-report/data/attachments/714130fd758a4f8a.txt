@@ -1,0 +1,19 @@
+INFO     Test_UserMgmt:Test_UserEdit.py:14 test_EditUser_004 is started 
+INFO     Test_UserMgmt:Test_UserEdit.py:15 Browser is opening
+INFO     Test_UserMgmt:Test_UserEdit.py:17 Opening the Home page 
+INFO     Test_UserMgmt:Test_UserEdit.py:19 Clicking on the login
+INFO     Test_UserMgmt:Test_UserEdit.py:21 Entering the Username-->mragrendrata
+INFO     Test_UserMgmt:Test_UserEdit.py:23 Entering the password-->Mragren@123
+INFO     Test_UserMgmt:Test_UserEdit.py:25 Clicking on the login button
+INFO     Test_UserMgmt:Test_UserEdit.py:27 Validating the User login
+INFO     Test_UserMgmt:Test_UserEdit.py:28 Opening the Dashboard page 
+INFO     Test_UserMgmt:Test_UserEdit.py:30 Clicking on the User Management
+INFO     Test_UserMgmt:Test_UserEdit.py:32 Entering the username-->mragrendrata
+INFO     Test_UserMgmt:Test_UserEdit.py:34 Clicking on the search
+INFO     Test_UserMgmt:Test_UserEdit.py:36 Erasing the old user name and Entering the New_User_Name-->mragrendrata
+INFO     Test_UserMgmt:Test_UserEdit.py:38 Erasing the Old_password and Entering the New_Password-->Mragren@123
+INFO     Test_UserMgmt:Test_UserEdit.py:40 Clicking on Save_Changes
+INFO     Test_UserMgmt:Test_UserEdit.py:42 Validating the User Edited or Not
+INFO     Test_UserMgmt:Test_UserEdit.py:45 test_EditUser_004 is passed
+INFO     Test_UserMgmt:Test_UserEdit.py:52 closing the browser
+INFO     Test_UserMgmt:Test_UserEdit.py:53 test_EditUser_004 is completed

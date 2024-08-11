@@ -1,0 +1,14 @@
+[32mINFO    [0m Test_Fund_Transfer_Edit_Class:Test_Fund_Transfer_Edit.py:14 test_Fund_Transfer_Edit_013 is started
+[32mINFO    [0m Test_Fund_Transfer_Edit_Class:Test_Fund_Transfer_Edit.py:16 opening the browser
+[32mINFO    [0m Test_Fund_Transfer_Edit_Class:Test_Fund_Transfer_Edit.py:18 Clicking on the login option
+[32mINFO    [0m Test_Fund_Transfer_Edit_Class:Test_Fund_Transfer_Edit.py:20 Entering the Username-->mragrendrata
+[32mINFO    [0m Test_Fund_Transfer_Edit_Class:Test_Fund_Transfer_Edit.py:22 Entering the password-->Mragren@123
+[32mINFO    [0m Test_Fund_Transfer_Edit_Class:Test_Fund_Transfer_Edit.py:24 Clicking on the login button
+[32mINFO    [0m Test_Fund_Transfer_Edit_Class:Test_Fund_Transfer_Edit.py:27 CLicking on the fund transfer mgmt link
+[32mINFO    [0m Test_Fund_Transfer_Edit_Class:Test_Fund_Transfer_Edit.py:29 Entering the transfer id -->62
+[32mINFO    [0m Test_Fund_Transfer_Edit_Class:Test_Fund_Transfer_Edit.py:31 Clicking on the search transfer button
+[32mINFO    [0m Test_Fund_Transfer_Edit_Class:Test_Fund_Transfer_Edit.py:33 Entering the Amount -->900
+[32mINFO    [0m Test_Fund_Transfer_Edit_Class:Test_Fund_Transfer_Edit.py:35 Entering the Description -->health
+[32mINFO    [0m Test_Fund_Transfer_Edit_Class:Test_Fund_Transfer_Edit.py:37 Clicking on the Update transfer button
+[32mINFO    [0m Test_Fund_Transfer_Edit_Class:Test_Fund_Transfer_Edit.py:39 Validating the update transfer
+[32mINFO    [0m Test_Fund_Transfer_Edit_Class:Test_Fund_Transfer_Edit.py:44 test_Fund_Transfer_Edit_013 is fail

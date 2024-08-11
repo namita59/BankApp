@@ -1,0 +1,1 @@
+pytest -v -n=5 --alluredir="AllureReports" --browser chrome

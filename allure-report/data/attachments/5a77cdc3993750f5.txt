@@ -1,0 +1,14 @@
+[32mINFO    [0m Test_Account_Create_Class:Test_Acc_Create.py:11 test_Account_Create_009 is started
+[32mINFO    [0m Test_Account_Create_Class:Test_Acc_Create.py:13 opening the browser
+[32mINFO    [0m Test_Account_Create_Class:Test_Acc_Create.py:15 Clicking on the login option
+[32mINFO    [0m Test_Account_Create_Class:Test_Acc_Create.py:17 Entering the Username
+[32mINFO    [0m Test_Account_Create_Class:Test_Acc_Create.py:19 Entering the password
+[32mINFO    [0m Test_Account_Create_Class:Test_Acc_Create.py:21 Clicking on the login button
+[32mINFO    [0m Test_Account_Create_Class:Test_Acc_Create.py:24 Clicking on the account mgmt 
+[32mINFO    [0m Test_Account_Create_Class:Test_Acc_Create.py:26 Clicking on the Create account link
+[32mINFO    [0m Test_Account_Create_Class:Test_Acc_Create.py:28 Entering the Customer id
+[32mINFO    [0m Test_Account_Create_Class:Test_Acc_Create.py:30 selecting  the Account type 
+[32mINFO    [0m Test_Account_Create_Class:Test_Acc_Create.py:32 Entering the balance
+[32mINFO    [0m Test_Account_Create_Class:Test_Acc_Create.py:34 Clicking on the Create account button
+[32mINFO    [0m Test_Account_Create_Class:Test_Acc_Create.py:36 Validating account has been created
+[32mINFO    [0m Test_Account_Create_Class:Test_Acc_Create.py:42 test_Account_Create_009 is failed

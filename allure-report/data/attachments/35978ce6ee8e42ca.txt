@@ -1,0 +1,8 @@
+[32mINFO    [0m Test_Search_User:Test_Search_User.py:73 test_Search_User_015 is started
+[32mINFO    [0m Test_Search_User:Test_Search_User.py:75 Opening the browser to login user
+[32mINFO    [0m Test_Search_User:Test_Search_User.py:77 Clicking on the login option
+[32mINFO    [0m Test_Search_User:Test_Search_User.py:79 Entering the username-->mragrendrata
+[32mINFO    [0m Test_Search_User:Test_Search_User.py:81 Entering the password-->Mragren@123
+[32mINFO    [0m Test_Search_User:Test_Search_User.py:83 Clicking on the login button
+[32mINFO    [0m Test_Search_User:Test_Search_User.py:86 Clicking on the user management
+[32mINFO    [0m Test_Search_User:Test_Search_User.py:88 Clicking on the Viewallusers

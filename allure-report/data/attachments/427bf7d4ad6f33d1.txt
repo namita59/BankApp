@@ -1,0 +1,3 @@
+Test run - Browser Chrome
+Customer deleted successfully
+Customer has been deleted

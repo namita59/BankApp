@@ -1,0 +1,15 @@
+[32mINFO    [0m Test_Account_Edit_Class:Test_Acc_Edit.py:15 test_Account_Edit_010 is started 
+[32mINFO    [0m Test_Account_Edit_Class:Test_Acc_Edit.py:17 opening the browser
+[32mINFO    [0m Test_Account_Edit_Class:Test_Acc_Edit.py:19 Clicking on the login option
+[32mINFO    [0m Test_Account_Edit_Class:Test_Acc_Edit.py:21 Entering the Username-->mragrendrata
+[32mINFO    [0m Test_Account_Edit_Class:Test_Acc_Edit.py:23 Entering the password-->Mragren@123
+[32mINFO    [0m Test_Account_Edit_Class:Test_Acc_Edit.py:25 Clicking on the login button
+[32mINFO    [0m Test_Account_Edit_Class:Test_Acc_Edit.py:29 Clicking on Account management link
+[32mINFO    [0m Test_Account_Edit_Class:Test_Acc_Edit.py:31 Entering the account id-->143
+[32mINFO    [0m Test_Account_Edit_Class:Test_Acc_Edit.py:33 Clicking on the search account button
+[32mINFO    [0m Test_Account_Edit_Class:Test_Acc_Edit.py:35 Clicking on the edit button
+[32mINFO    [0m Test_Account_Edit_Class:Test_Acc_Edit.py:37 selecting the account type-->Current Account
+[32mINFO    [0m Test_Account_Edit_Class:Test_Acc_Edit.py:39 entering the balance-->9000000
+[32mINFO    [0m Test_Account_Edit_Class:Test_Acc_Edit.py:41 Clicking on the Update account button
+[32mINFO    [0m Test_Account_Edit_Class:Test_Acc_Edit.py:43 Validating account has been updated
+[32mINFO    [0m Test_Account_Edit_Class:Test_Acc_Edit.py:48 test_Account_Edit_010 is fail

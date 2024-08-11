@@ -1,0 +1,17 @@
+[32mINFO    [0m Test_BankApp_Cust_Delete_Class:Test_Cust_Delete.py:12 test_BankApp_Cust_del_007 is started
+[32mINFO    [0m Test_BankApp_Cust_Delete_Class:Test_Cust_Delete.py:14 Opening the browser to login user
+[32mINFO    [0m Test_BankApp_Cust_Delete_Class:Test_Cust_Delete.py:16 Clicking on the login option
+[32mINFO    [0m Test_BankApp_Cust_Delete_Class:Test_Cust_Delete.py:18 Entering  the username-->mragrendrata
+[32mINFO    [0m Test_BankApp_Cust_Delete_Class:Test_Cust_Delete.py:20 Entering the password-->Mragren@123
+[32mINFO    [0m Test_BankApp_Cust_Delete_Class:Test_Cust_Delete.py:22 Clicking on the login button
+[32mINFO    [0m Test_BankApp_Cust_Delete_Class:Test_Cust_Delete.py:24 opening the browser to edit customer
+[32mINFO    [0m Test_BankApp_Cust_Delete_Class:Test_Cust_Delete.py:26 Clicking on the Customer management option
+[32mINFO    [0m Test_BankApp_Cust_Delete_Class:Test_Cust_Delete.py:28 Entering the Customer id-->94
+[32mINFO    [0m Test_BankApp_Cust_Delete_Class:Test_Cust_Delete.py:30 Clicking on the search button
+[32mINFO    [0m Test_BankApp_Cust_Delete_Class:Test_Cust_Delete.py:32 Clicking on the delete button
+[32mINFO    [0m Test_BankApp_Cust_Delete_Class:Test_Cust_Delete.py:34 Validating the customer delete
+[32mINFO    [0m Test_BankApp_Cust_Delete_Class:Test_Cust_Delete.py:36 taking the Screenshots
+[32mINFO    [0m Test_BankApp_Cust_Delete_Class:Test_Cust_Delete.py:39 test_Cust_del_007 is passed
+[32mINFO    [0m Test_BankApp_Cust_Delete_Class:Test_Cust_Delete.py:45 test_Cust_del_007 is completed
+[32mINFO    [0m Test_BankApp_Cust_Delete_Class:Test_Cust_Delete.py:47 Closing the browser
+[32mINFO    [0m Test_BankApp_Cust_Delete_Class:Test_Cust_Delete.py:48 test_Cust_del_008 is Completed

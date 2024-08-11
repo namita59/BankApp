@@ -1,0 +1,9 @@
+INFO     Test_SignIn_CLass:Test_SignIn.py:20 test_SignIn_003 is started
+INFO     Test_SignIn_CLass:Test_SignIn.py:22 Browser is opening
+INFO     Test_SignIn_CLass:Test_SignIn.py:24 Clicking on the Login
+INFO     Test_SignIn_CLass:Test_SignIn.py:26 Entering the username-->Mragrendrata
+INFO     Test_SignIn_CLass:Test_SignIn.py:28 Entering the password-->ragren@123
+INFO     Test_SignIn_CLass:Test_SignIn.py:30 Clicking on login
+INFO     Test_SignIn_CLass:Test_SignIn.py:32 Validating the User_Login
+INFO     Test_SignIn_CLass:Test_SignIn.py:54 test_SignIn_003 is Passed
+INFO     Test_SignIn_CLass:Test_SignIn.py:55 Taking the Screenshot

@@ -1,0 +1,14 @@
+[32mINFO    [0m Test_Fund_Transfer_Delete_Class:Test_Fund_Transfer_Delete.py:12 test_Fund_Transfer_Delete_014 is started
+[32mINFO    [0m Test_Fund_Transfer_Delete_Class:Test_Fund_Transfer_Delete.py:14 opening the browser
+[32mINFO    [0m Test_Fund_Transfer_Delete_Class:Test_Fund_Transfer_Delete.py:16 Clicking on the login option
+[32mINFO    [0m Test_Fund_Transfer_Delete_Class:Test_Fund_Transfer_Delete.py:18 Entering the Username-->mragrendrata
+[32mINFO    [0m Test_Fund_Transfer_Delete_Class:Test_Fund_Transfer_Delete.py:20 Entering the password-->Mragren@123
+[32mINFO    [0m Test_Fund_Transfer_Delete_Class:Test_Fund_Transfer_Delete.py:22 Clicking on the login button
+[32mINFO    [0m Test_Fund_Transfer_Delete_Class:Test_Fund_Transfer_Delete.py:25 CLicking on the fund transfer mgmt link
+[32mINFO    [0m Test_Fund_Transfer_Delete_Class:Test_Fund_Transfer_Delete.py:27 Entering the transfer id -->62
+[32mINFO    [0m Test_Fund_Transfer_Delete_Class:Test_Fund_Transfer_Delete.py:29 Clicking on the search transfer button
+[32mINFO    [0m Test_Fund_Transfer_Delete_Class:Test_Fund_Transfer_Delete.py:31 Clicking on the delete Transfer button
+[32mINFO    [0m Test_Fund_Transfer_Delete_Class:Test_Fund_Transfer_Delete.py:33 Validating delete transfer is not applicable
+[32mINFO    [0m Test_Fund_Transfer_Delete_Class:Test_Fund_Transfer_Delete.py:35 test_Fund_Transfer_Delete_014 is pass
+[32mINFO    [0m Test_Fund_Transfer_Delete_Class:Test_Fund_Transfer_Delete.py:42 Closing the browser
+[32mINFO    [0m Test_Fund_Transfer_Delete_Class:Test_Fund_Transfer_Delete.py:44 test_Fund_Transfer_Delete_014 is Completed

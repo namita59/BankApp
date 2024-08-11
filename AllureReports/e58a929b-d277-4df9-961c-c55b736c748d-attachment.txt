@@ -1,0 +1,16 @@
+[32mINFO    [0m Test_Bill_Payment_Create_Class:Test_Bill_Payment_Create.py:12 test_Bill_Payment_014 is started
+[32mINFO    [0m Test_Bill_Payment_Create_Class:Test_Bill_Payment_Create.py:14 opening the browser
+[32mINFO    [0m Test_Bill_Payment_Create_Class:Test_Bill_Payment_Create.py:16 Clicking on the login option
+[32mINFO    [0m Test_Bill_Payment_Create_Class:Test_Bill_Payment_Create.py:18 Entering the Username-->mragrendrata
+[32mINFO    [0m Test_Bill_Payment_Create_Class:Test_Bill_Payment_Create.py:20 Entering the password-->Mragren@123
+[32mINFO    [0m Test_Bill_Payment_Create_Class:Test_Bill_Payment_Create.py:22 Clicking on the login button
+[32mINFO    [0m Test_Bill_Payment_Create_Class:Test_Bill_Payment_Create.py:26 CLicking on the bill payment link
+[32mINFO    [0m Test_Bill_Payment_Create_Class:Test_Bill_Payment_Create.py:28 Entering the Account id-->143
+[32mINFO    [0m Test_Bill_Payment_Create_Class:Test_Bill_Payment_Create.py:30 Entering the name of payee-->Deepak
+[32mINFO    [0m Test_Bill_Payment_Create_Class:Test_Bill_Payment_Create.py:32 Entering the amount -->5000
+[32mINFO    [0m Test_Bill_Payment_Create_Class:Test_Bill_Payment_Create.py:34 Entering the description-->Food
+[32mINFO    [0m Test_Bill_Payment_Create_Class:Test_Bill_Payment_Create.py:36 Clicking on the paybill button
+[32mINFO    [0m Test_Bill_Payment_Create_Class:Test_Bill_Payment_Create.py:38 Validating the bill pay 
+[32mINFO    [0m Test_Bill_Payment_Create_Class:Test_Bill_Payment_Create.py:40 test_Bill_Payment_Create_014 is pass 
+[32mINFO    [0m Test_Bill_Payment_Create_Class:Test_Bill_Payment_Create.py:48 Closing the browser
+[32mINFO    [0m Test_Bill_Payment_Create_Class:Test_Bill_Payment_Create.py:49 test_Bill_Payment_Create_014 is Completed
