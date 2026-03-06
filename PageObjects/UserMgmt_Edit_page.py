@@ -6,46 +6,58 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 class UserMgmt_Class:
-    Clickon_UserMgmt_Xpath = (By.XPATH,"//a[normalize-space()='User Management']")
-    Clickon_Search_Button_Xpath=(By.XPATH,"//button[@type='submit']")
-    Clickon_SaveChnages_Button_Xpath = (By.XPATH,"//button[normalize-space()='Save Changes']")
-    Text_Search_Username_Xpath = (By.XPATH,"/html[1]/body[1]/div[1]/form[1]/input[1]")
-    Text_Username_Xpath = (By.XPATH,"/html[1]/body[1]/div[1]/form[1]/input[2]")
-    Text_Password_Xpath = (By.XPATH,"/html[1]/body[1]/div[1]/form[1]/input[3]")
-    Text_Phone_Number_Xpath =(By.XPATH,"/html[1]/body[1]/div[1]/form[1]/input[5]")
-    Success_Validate_Xpath = (By.XPATH,"/html/body/div/div[2]")
+    clickon_usermgmt_xpath = (By.XPATH,"//a[normalize-space()='User Management']")
+    clickon_search_button_xpath=(By.XPATH,"//button[@type='submit']")
+    Clickon_savechanges_button_xpath = (By.XPATH,"//button[normalize-space()='Save Changes']")
+    text_search_username_xpath = (By.ID,"searchUsername")
+    text_username_xpath = (By.ID,"username")
+    text_password_xpath = (By.ID,"password")
+    text_email_xpath = (By.ID,"email")
+    text_phone_number_xpath =(By.ID,"phone")
+    success_validate_xpath = (By.XPATH,"/html/body/div/div[2]")
 
     def __init__(self,driver):
         self.driver = driver
         self.wait = WebDriverWait(self.driver,40)
 
-    def Clickon_UserMgmt(self):
-        self.wait.until(EC.visibility_of_element_located(self.Clickon_UserMgmt_Xpath)).click()
+    def ClickOn_UserMgmt(self):
+        element = self.wait.until(EC.visibility_of_element_located(self.clickon_usermgmt_xpath))
+        element.click()
 
     def Enter_Username_for_Search(self,username):
-        self.wait.until(EC.visibility_of_element_located(self.Text_Search_Username_Xpath)).send_keys(username)
+        element = self.wait.until(EC.visibility_of_element_located(self.text_search_username_xpath))
+        element.send_keys(username)
 
     def Enter_NewUsername(self,newusername):
-        username =self.wait.until(EC.visibility_of_element_located(self.Text_Username_Xpath))
-        username.clear()
-        username.send_keys(newusername)
+        element =self.wait.until(EC.visibility_of_element_located(self.text_username_xpath))
+        element.clear()
+        element.send_keys(newusername)
 
     def Enter_NewPassword(self,newpassword):
-        password = self.wait.until(EC.visibility_of_element_located(self.Text_Password_Xpath))
-        password.clear()
-        password.send_keys(newpassword)
+        element = self.wait.until(EC.visibility_of_element_located(self.text_password_xpath))
+        element.clear()
+        element.send_keys(newpassword)
+    def Enter_NewEmail(self,newemail):
+        element = self.wait.until(EC.visibility_of_element_located(self.text_email_xpath))
+        element.clear()
+        element.send_keys(newemail)
+    def Enter_NewPhoneNumber(self,newphonenumber):
+        element = self.wait.until(EC.visibility_of_element_located(self.text_phone_number_xpath))
+        element.clear()
+        element.send_keys(newphonenumber)
     def Clickon_Search(self):
-        self.wait.until(EC.visibility_of_element_located(self.Clickon_Search_Button_Xpath)).click()
+        element = self.wait.until(EC.visibility_of_element_located(self.clickon_search_button_xpath))
+        element.click()
 
     def Clickon_SaveChanges(self):
-        self.wait.until(EC.visibility_of_element_located(self.Clickon_Search_Button_Xpath))
+        element =self.wait.until(EC.visibility_of_element_located(self.clickon_search_button_xpath))
         self.driver.execute_script("window.scrollTo(0,document.body.scrollHeight);")
-        self.driver.find_element(*UserMgmt_Class.Clickon_SaveChnages_Button_Xpath).click()
+        element.click()
     def Validate_EditUser(self):
         try:
-            self.wait.until(EC.visibility_of_element_located(self.Success_Validate_Xpath))
-            print("UserUpdatedSucessfully")
-            return "UserUpdated"
+            element = self.wait.until(EC.visibility_of_element_located(self.success_validate_xpath))
+            print("UserUpdated Successfully")
+            return "Pass"
         except:
             print("UserUpdateUnsuccessful")
-            return "UserUpdationFailed"
+            return "Failed"

@@ -3,51 +3,99 @@ from PageObjects.UserMgmt_Edit_page import UserMgmt_Class
 from PageObjects.SignIn_Page import User_Signin_Class
 from utilityPackage.readConfigFile import ReadConfig_Class
 from utilityPackage.loggerfile import LogGenerator
+import pytest
+import allure
+@pytest.mark.usefixture("setup")
 class Test_UserMgmt:
     Username = ReadConfig_Class.getUserNametoEdit()
     Password = ReadConfig_Class.getPassword()
     NewUsername =ReadConfig_Class.getNewUserName()
     NewPassword = ReadConfig_Class.getNewPassword()
+    NewEmail = ReadConfig_Class.getNewEmail()
+    NewPhoneNumber = ReadConfig_Class.getNewPhoneNumber()
+    login_url = ReadConfig_Class.getLoginUrl()
     log = LogGenerator.loggen()
+    driver = None
 
-    def test_EditUser_005(self,setup):
-        self.log.info("test_EditUser_004 is started ")
-        self.log.info("Browser is opening")
-        self.driver = setup
-        self.log.info("Opening the Home page ")
-        self.si = User_Signin_Class(self.driver)
-        self.log.info("Clicking on the login")
-        self.si.ClickOn_Login_Option()
-        self.log.info("Entering the Username-->"+self.Username)
-        self.si.Enter_Username(self.Username)
-        self.log.info("Entering the password-->"+self.Password)
-        self.si.Enter_Password(self.Password)
-        self.log.info("Clicking on the login button")
-        self.si.CLickOn_LogIn_Button()
-        self.log.info("Validating the User login")
-        self.log.info("Opening the Dashboard page ")
-        self.um = UserMgmt_Class(self.driver)
-        self.log.info("Clicking on the User Management")
-        self.um.Clickon_UserMgmt()
-        self.log.info("Entering the username-->"+self.Username)
-        self.um.Enter_Username_for_Search(self.Username)
-        self.log.info("Clicking on the search")
-        self.um.Clickon_Search()
-        self.log.info("Erasing the old user name and Entering the New_User_Name-->"+self.NewUsername)
-        self.um.Enter_NewUsername(self.NewUsername)
-        self.log.info("Erasing the Old_password and Entering the New_Password-->"+self.NewPassword)
-        self.um.Enter_NewPassword(self.NewPassword)
-        self.log.info("Clicking on Save_Changes")
-        self.um.Clickon_SaveChanges()
-        self.log.info("Validating the User Edited or Not")
-        if self.um.Validate_EditUser() == "UserUpdated":
-            print("User_Edit_Pass")
-            self.log.info("test_EditUser_004 is passed")
-            assert True
-        else:
-            print("User_Edit_Failed")
-            self.log.info("test_EditUser_004 is failed")
-            self.driver.save_screenshot(".\\Screenshots\\test_EditUser_004_fail.png")
-            assert False
-        self.log.info("closing the browser")
-        self.log.info("test_EditUser_004 is completed")
+    @allure.feature('User Management')
+    @allure.story('Valid Edit User')
+    @allure.severity(allure.severity_level.CRITICAL)
+    @allure.description('this test verifies the page title of the Bank application')
+    @allure.link('https://bankapp.credence.in/' , 'Bank Application')
+    @allure.testcase('TESTCASE_005','TEST CASE LINK')
+    def test_EditUser_005(self):
+        with allure.step('test_EditUser_005 is started'):
+            self.log.info("test_EditUser_005 is started")
+            self.driver.get(self.login_url)
+        with allure.step('Opening the browser'):
+            self.log.info("Opening the browser")
+            si = User_Signin_Class(self.driver)
+        with allure.step('Clicking on the Login'):
+            self.log.info("Clicking on the Login")
+            si.ClickOn_Login_Option()
+
+        with allure.step('Entering the username'):
+            self.log.info("Entering the username-->"+self.Username)
+            si.Enter_Username(self.Username)
+
+        with allure.step('Entering the password'):
+            self.log.info("Entering the password-->"+self.Password)
+            si.Enter_Password(self.Password)
+
+        with allure.step('Clicking on login'):
+            self.log.info("Clicking on login")
+            si.CLickOn_LogIn_Button()
+        with allure.step('Validating the User login'):
+            self.log.info("Validating the User login")
+            self.log.info("Opening the Dashboard page ")
+            um = UserMgmt_Class(self.driver)
+        with allure.step('Clicking on the User Management'):
+            self.log.info("Clicking on the User Management")
+            um.ClickOn_UserMgmt()
+        with allure.step('Entering the username'):
+            self.log.info("Entering the username-->"+self.Username)
+            um.Enter_Username_for_Search(self.Username)
+        with allure.step('Clicking on the search'):
+            self.log.info("Clicking on the search")
+            um.Clickon_Search()
+        with allure.step('Entering the New_User_Name'):
+            self.log.info("Entering the New_User_Name-->"+self.NewUsername)
+            um.Enter_NewUsername(self.NewUsername)
+
+        with allure.step('Entering the New_Password'):
+            self.log.info("Entering the New_Password-->"+self.NewPassword)
+            um.Enter_NewPassword(self.NewPassword)
+
+        with allure.step('Entering the New_Email'):
+            um.Enter_NewEmail(self.NewEmail)
+            self.log.info("Entered the New_Email-->"+self.NewEmail)
+
+        with allure.step('Entering the New_Phone_Number'):
+            um.Enter_NewPhoneNumber(self.NewPhoneNumber)
+            self.log.info("Entered the New_Phone_Number-->"+self.NewPhoneNumber)
+
+
+        with allure.step('Clicking on Save_Changes'):
+            um.Clickon_SaveChanges()
+            self.log.info("Clicked on Save_Changes")
+
+        with allure.step('Validating the User Edit'):
+            self.log.info("Validating the User Edit")
+            actual_result = um.Validate_EditUser()
+            expected_result = "UserUpdated"
+            if actual_result == expected_result:
+                with allure.step(f'Actual Result: {actual_result} Expected Result: {expected_result}'):
+                    self.log.info(f'Actual Result: {actual_result} Expected Result: {expected_result}')
+                    self.log.info("test_EditUser_005 is passed")
+                    self.driver.save_screenshot(".\\AllureReports\\test_EditUser_005_pass.png")
+                    allure.attach(self.driver.get_screenshot_as_png(), name="test_EditUser_005_pass", attachment_type=allure.attachment_type.PNG)
+                    assert True
+            else:
+                with allure.step(f'Actual Result: {actual_result} Expected Result: {expected_result}'):
+                    self.log.info(f'Actual Result: {actual_result} Expected Result: {expected_result}')
+                    self.log.info("test_EditUser_005 is failed")
+                    self.driver.save_screenshot(".\\AllureReports\\test_EditUser_005_fail.png")
+                    allure.attach(self.driver.get_screenshot_as_png(), name="test_EditUser_005_fail", attachment_type=allure.attachment_type.PNG)
+                    assert False
+        with allure.step('test_EditUser_005 is completed'):
+            self.log.info("test_EditUser_005 is completed")

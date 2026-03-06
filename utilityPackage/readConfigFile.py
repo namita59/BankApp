@@ -103,3 +103,18 @@ class ReadConfig_Class:
     def getDescription():
         descript = config.get('Transfer Edit', 'Description')
         return descript
+
+    @staticmethod
+    def getLoginUrl():
+        login_url = config.get('Login', 'login_url')
+        return login_url
+
+    @staticmethod
+    def getNewEmail():
+        NewEmail = config.get('Edit User','NewEmail')
+        return NewEmail
+
+    @staticmethod
+    def getNewPhoneNumber():
+        NewPhoneNumber = config.get('Edit User','NewPhoneNumber')
+        return NewPhoneNumber

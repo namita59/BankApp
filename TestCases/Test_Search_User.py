@@ -1,120 +1,99 @@
-# import time
-#
-# import pytest
-#
-import time
+import pytest
+import allure
 
 from utilityPackage.loggerfile import LogGenerator
 from PageObjects.SignIn_Page import User_Signin_Class
 from utilityPackage.readConfigFile import ReadConfig_Class
 from PageObjects.Search_User_page import Search_User_Page
-from utilityPackage import ExcelUtility
-# class Test_Search_User:
-#     Username = ReadConfig_Class.getNewUserName()
-#     Password = ReadConfig_Class.getNewPassword()
-#     log = LogGenerator.loggen()
-#     file_path = ".\\TestCases\\Testdata\\TestData.xlsx"
-#     List_status = []
-#     def test_Search_User_015(self,setup):
-#         self.log.info("test_Search_User_015 is started")
-#         self.driver = setup
-#         self.log.info("Opening the browser to login user")
-#         self.si = User_Signin_Class(self.driver)
-#         self.log.info("Clicking on the login option")
-#         self.si.ClickOn_Login_Option()
-#         self.log.info("Entering  the username-->" + self.Username)
-#         self.si.Enter_Username(self.Username)
-#         self.log.info("Entering the password-->" + self.Password)
-#         self.si.Enter_Password(self.Password)
-#         self.log.info("Clicking on the login button")
-#         self.si.CLickOn_LogIn_Button()
-#         self.su = Search_User_Page(self.driver)
-#         self.log.info("Clicking on the user management")
-#         self.su.ClickOn_User_Mgmt()
-#         self.log.info("Clicking on the Viewallusers")
-#         self.su.Click_On_ViewAllUsers()
-#         self.log.info("number of row -->")
-#         self.row =ExcelUtility.getRowCount(self.file_path,"Username")
-#         self.log.info("iterating the file")
-#         for r in range(2,self.row+1):
-#             self.log.info("reading user id from Excel sheet-->")
-#             self.UserID =ExcelUtility.readData(self.file_path,"Username",r,2)
-#             self.log.info("reading expected result")
-#             self.ExpectedResult = ExcelUtility.readData(self.file_path, "Username", r, 3)
-#             time.sleep(5)
-#             if self.UserID in self.su.Search_User() and self.ExpectedResult =="pass":
-#                 self.actual = ExcelUtility.writeData(self.file_path, "Username", r, 4, "pass")
-#                 self.List_status.append("pass")
-#             else:
-#                 self.actual=ExcelUtility.writeData(self.file_path, "Username", r, 4, "fail")
-#                 self.List_status.append("fail")
-#
-#         if "fail" not in self.List_status:
-#             assert True
-#         else:
-#             assert False
-#
-#
-# import time
-# from utilityPackage.loggerfile import LogGenerator
-# from PageObjects.SignIn_Page import User_Signin_Class
-# from utilityPackage.readConfigFile import ReadConfig_Class
-# from PageObjects.Search_User_page import Search_User_Page
-# from utilityPackage import ExcelUtility
+from utilityPackage.ExcelUtility import ExcelUtility_Class
 
-class Test_Search_User:
+@pytest.mark.usefixture("setup")
+class Test_Search_User_Class:
     Username = ReadConfig_Class.getNewUserName()
     Password = ReadConfig_Class.getNewPassword()
     log = LogGenerator.loggen()
     file_path = ".\\TestCases\\Testdata\\TestData.xlsx"
-    List_status = []
+    driver = None
+    login_url = ReadConfig_Class.getLoginUrl()
+    @pytest.mark.sanity
+    @allure.feature('Search User Verification')
+    @allure.story('Validating Search User')
+    @allure.severity(allure.severity_level.CRITICAL)
+    @allure.description('this test validates the Search User of the Bank application')
+    @allure.link('https://bankapp.credence.in/', 'Bank Application')
+    @allure.testcase('TESTCASE_015', 'TEST CASE LINK')
+    def test_Search_User_015(self):
+        with allure.step('test_Search_User_015 is started'):
+            self.log.info("test_Search_User_015 is started")
+        with allure.step('Landing on the Login Page'):
+            self.driver.get(self.login_url)
+            si = User_Signin_Class(self.driver)
+            self.log.info("Landed on the login Page")
+        with allure.step('Clicking on the Login'):
+            si.ClickOn_Login_Option()
+            self.log.info("Clicked  on the Login")
 
-    def test_Search_User_015(self, setup):
-        self.log.info("test_Search_User_015 is started")
-        self.driver = setup
-        self.log.info("Opening the browser to login user")
-        self.si = User_Signin_Class(self.driver)
-        self.log.info("Clicking on the login option")
-        self.si.ClickOn_Login_Option()
-        self.log.info("Entering the username-->" + self.Username)
-        self.si.Enter_Username(self.Username)
-        self.log.info("Entering the password-->" + self.Password)
-        self.si.Enter_Password(self.Password)
-        self.log.info("Clicking on the login button")
-        self.si.CLickOn_LogIn_Button()
-        self.su = Search_User_Page(self.driver)
-        self.log.info("Clicking on the user management")
-        self.su.ClickOn_User_Mgmt()
-        self.log.info("Clicking on the Viewallusers")
-        self.su.Click_On_ViewAllUsers()
-        self.log.info("number of row -->")
-        self.row = ExcelUtility.getRowCount(self.file_path, "userid")
-        self.log.info(f"Total rows in Excel: {self.row}")
-        self.log.info("iterating the file")
+        with allure.step('Entering the username'):
+            si.Enter_Username(self.Username)
+            self.log.info("Entering the username-->"+self.Username)
 
-        for r in range(2, self.row + 1):
-            self.log.info(f"Processing row {r}")
-            self.log.info("reading user id from Excel sheet-->")
-            user_id = str(ExcelUtility.readData(self.file_path, "userid", r, 2))
-            self.log.info(f"User ID from Excel: {user_id}")
-            self.log.info("reading expected result")
-            self.ExpectedResult = ExcelUtility.readData(self.file_path, "userid", r, 3)
-            self.log.info(f"Expected Result: {self.ExpectedResult}")
-            time.sleep(5)
-            actual_user_ids = self.su.Search_User()
-            self.log.info(f"Actual User IDs: {actual_user_ids}")
+        with allure.step('Entering the password'):
+            si.Enter_Password(self.Password)
+            self.log.info("Entered the password-->"+self.Password)
 
-            if user_id in actual_user_ids and self.ExpectedResult == "pass":
-                self.log.info(f"User ID {user_id} found, writing 'pass'")
-                ExcelUtility.writeData(self.file_path, "userid", r, 4, "pass")
-                self.List_status.append("pass")
+        with allure.step('Clicking on login'):
+            si.CLickOn_LogIn_Button()
+            self.log.info("Clicked on login button")
+
+        su = Search_User_Page(self.driver)
+        with allure.step('Clicking on the User Management'):
+            su.ClickOn_User_Mgmt()
+            self.log.info("Clicking on the User Management")
+        with allure.step('Clicking on the ViewAllUsers'):
+            su.Click_On_ViewAllUsers()
+            self.log.info("Clicked on the ViewAllUsers")
+
+            self.log.info("number of row -->")
+        with allure.step('Reading the number of rows'):
+            row = ExcelUtility_Class.getRowCount(self.file_path, "userid")
+            self.log.info(f"Total rows in Excel: {row}")
+            self.log.info("iterating the file")
+        for r in range(2, row + 1):
+            user_id, ExpectedResult = [ExcelUtility_Class.readData(self.file_path, "userid", r, c)for c in range(2, 3)]
+            actual_result = su.ValidateSearch_User(user_id)
+            with allure.step(f'Writing the actual result :{actual_result}'):
+                ExcelUtility_Class.writeData(self.file_path, "userid", r, 4, actual_result)
+                self.log.info(f"Actual Result: {actual_result}")
+            with allure.step(f'Writing the status :{"Pass" if actual_result == ExpectedResult else "Fail"}'):
+                ExcelUtility_Class.writeData(self.file_path, "userid", r, 5, "Pass" if actual_result == ExpectedResult else "Fail")
+                self.log.info(f"Status: {'Pass' if actual_result == ExpectedResult else 'Fail'}")
+            if actual_result == ExpectedResult:
+                with allure.step(f'Actual Result: {actual_result} Expected Result: {ExpectedResult}'):
+                    self.log.info(f'Actual Result: {actual_result} Expected Result: {ExpectedResult}')
+                    self.log.info("test_Search_User_015 is passed")
+                with allure.step('Taking screenshot'):
+                    self.driver.save_screenshot(".\\AllureReports\\test_Search_User_015_pass.png")
+                    self.log.info("Saved screenshot")
+                with allure.step('Attaching screenshot in Allure Report'):
+                    allure.attach(self.driver.get_screenshot_as_png(), name="test_Search_User_015_pass", attachment_type=allure.attachment_type.PNG)
+                    self.log.info("Attached screenshot in Allure Report")
+                with allure.step('Expected Result: Test_Search_User_015 is passed'):
+                    self.log.info("Test_Search_User_015 is passed")
+                    assert True
+
             else:
-                self.log.info(f"User ID {user_id} not found or expected result is not 'pass', writing 'fail'")
-                ExcelUtility.writeData(self.file_path, "userid", r, 4, "fail")
-                self.List_status.append("fail")
+                with allure.step(f'Actual Result: {actual_result} Expected Result: {ExpectedResult}'):
+                    self.log.info(f'Actual Result: {actual_result} Expected Result: {ExpectedResult}')
+                    self.log.info("test_Search_User_015 is failed")
+                with allure.step('Taking screenshot'):
+                    self.driver.save_screenshot(".\\AllureReports\\test_Search_User_015_fail.png")
+                    self.log.info("saved screenshot")
+                with allure.step('Attaching screenshot in Allure Report'):
+                    allure.attach(self.driver.get_screenshot_as_png(), name="test_Search_User_015_fail", attachment_type=allure.attachment_type.PNG)
+                    self.log.info("Attached screenshot in Allure Report")
+                with allure.step('test_Search_User_015 is failed'):
+                    self.log.info("test_Search_User_015 is failed")
+                    assert False
 
-        self.log.info(f"Final List Status: {self.List_status}")
-        if "fail" not in self.List_status:
-            assert True
-        else:
-            assert False
+            with allure.step('test_Search_User_015 is completed'):
+                self.log.info("test_Search_User_015 is completed")

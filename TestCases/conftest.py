@@ -7,7 +7,7 @@ chrome_options.add_argument("headless")
 def pytest_addoption(parser):
     parser.addoption("--browser")
 
-@pytest.fixture
+@pytest.fixture(scope="class")
 def setup(request):
     browser = request.config.getoption("--browser")
     if browser  == "chrome":
@@ -25,9 +25,8 @@ def setup(request):
     else:
         print("Test run - Headless")
         driver = webdriver.Chrome(options=chrome_options)
+    request.cls.driver = driver
     driver.maximize_window()
-    driver.implicitly_wait(5)
-    driver.get("https://bankapp.credence.in/")
     yield driver
     driver.quit()
 
@@ -40,7 +39,7 @@ def setup(request):
 def getDataForLoginValidation(request):
     return request.param
 
-@pytest.fixture(params=[("kishore","Singh","07022005","shiv puram 23","Agra","Uttra Pradesh","282001")])
+@pytest.fixture(params=[('5080',"kishore","Singh","1995-12-25","shiv puram 23","Agra","Uttra Pradesh","28200")])
 def getDataForCustomerCreate(request):
     return request.param
 
